@@ -18,8 +18,8 @@ const connectDb = require('./db/connect')
 
 //router
 const authRouter = require('./routes/auth')
-const destinationRouter = require('./routes/destinations')
-const reviewRouter = require('./routes/reviews')
+const destinationRouter = require('./routes/destination')
+    // const reviewRouter = require('./routes/reviews')
 
 // app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -29,7 +29,7 @@ app.use(cors())
 //routes
 app.use('/api/v1/destinations', destinationRouter)
 app.use('/api/v1/auth', authRouter)
-app.use('/api/v1/reviews', reviewRouter)
+    // app.use('/api/v1/reviews', reviewRouter)
 
 
 app.use(notFoundMiddleware);
